@@ -1,0 +1,37 @@
+{%extends base.html%}
+{%block title%}注册{%end%}
+{%block head%}
+    <link rel="stylesheet" href=static/css/login.css>
+    <script src="static/js/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            var unameinput = $('#unameinput');
+            var uname_tip = $('#uname-tip');
+            unameinput.blur(function () {
+                var name = unameinput.val();
+                console.log(name)
+                $.ajax({
+                    url:'/check',
+                    data:{"uname":name, 'type':'register'},
+                    type:'post',
+                    datatype:'json',
+                    success:function(data){
+                        if(data.msg == 'fail'){
+                            uname_tip.text('该名已被占用')
+                        }else{
+                            uname_tip.text('')
+                        }
+                    },
+                    error:function (error) {
+                        console.log('错误信息:'+ error)
+                    }
+                });
+            });
+        });
+    </script>
+{%end%}
+{%block body%}
+<div class="login">
+    {%module registermodule()%}
+</div>
+{%end%}

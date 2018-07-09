@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{%block title%}发布博客{%end%}
+
+{%block head %}
+    <link rel="stylesheet" href="static/css/publish.css">
+    <script src="static/js/publish.js"></script>
+{% end %}
+
+{% block body %}
+    <form action="/publish" method="post" enctype="multipart/form-data" name="pub" id="testForm">
+        <div id="pblog">
+        <table class="content">
+            <tr class="label">
+                <td colspan="2">
+                    <span>添加标题</span>
+                    <input name="title" type="text" placeholder="添加您的标题" class="label" id="title">
+                    <span>添加标签</span>
+                    <select name="label" class="label">
+                        <option value="1">编程</option>
+                        <option value="2">青春</option>
+                        <option value="3">学习</option>
+                        <option value="4">情怀</option>
+                        <option value="5">游记</option>
+                        <option value="6">热点</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="mblog" id="mblog" placeholder="Input Your Microblog Here!"></textarea>
+                </td>
+            </tr>
+            <tr class="pbtn">
+                <td>
+                    <input type="reset" value="取消" onclick="javascript:location.href='/blog'">
+                </td>
+                <td>
+                    <input type="submit" value="发布" id="sub">
+                </td>
+            </tr>
+        </table>
+        </div>
+    </form>
+{% end %}

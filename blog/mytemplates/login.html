@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block title%}登录{%end%}
+{%block head%}
+    <link rel="stylesheet" href=static/css/login.css>
+    <script src=static/js/jquery-3.2.1.js></script>
+    <script>
+        $(function () {
+            var uname = $('#unameinput');
+            var imgavatar = $('#avatar');
+            uname.blur(function () {
+                var name = uname.val();
+                $.ajax({
+                    url:'/check',
+                    data:{"uname":name, 'type':'avatar'},
+                    type:'post',
+                    datatype:'json',
+                    success:function (data) {
+                        imgavatar.attr('src','static/images/'+data.msg)
+                    },
+                    error:function (error) {
+                        console.log('错误--->'+error)
+                    }
+                })
+            })
+        })
+    </script>
+{%end%}
+{%block body%}
+<div class="login">
+   {%module loginmodule()%}
+</div>
+{%end%}

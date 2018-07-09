@@ -1,0 +1,60 @@
+*{
+    margin-bottom: 10px;
+}
+#pblog .content{
+    width:80%;
+    text-align: left;
+    margin: 0px auto;
+}
+#pblog .content #mblog{
+    border:1px solid #50a3a2;
+    border-radius: 5px;
+    padding: 20px 20px;
+    margin-left:10px;
+    width: 90%;
+    height: 200px;
+    vertical-align: top;
+    font-size: 18px;
+}
+#pblog .label td{
+    font-size: 18px;
+}
+#pblog .upload{
+    width: 150px;
+    padding: 0px;
+    text-align: center;
+}
+#pblog .picpath{
+    border:none;
+    color:#50a3a2;
+}
+#pblog .pbtn input{
+    margin-left: 20px;
+    color: #666666;
+    font-size: 16px;
+    font-family: '微软雅黑';
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #50a3a2;
+    border-radius: 5px;
+    width: 150px;
+    height: 36px;
+    line-height: 34px;
+}
+.label{
+    color: #666666;
+    font-size: 16px;
+    font-family: '微软雅黑';
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #50a3a2;
+    border-radius: 5px;
+    width: 300px;
+    height: 36px;
+    line-height: 34px;
+}
+span{
+    margin-left: 20px;
+}

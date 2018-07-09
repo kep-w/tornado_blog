@@ -1,0 +1,11 @@
+{% extends base.html %}
+{%block title%}博客{%end%}
+
+{%block head%}
+    <link rel="stylesheet" href=static/css/blog.css>
+    <script src="static/js/jquery-3.2.1.js"></script>
+{%end%}
+
+{%block body%}
+{% module blogmodule() %}
+{%end%}

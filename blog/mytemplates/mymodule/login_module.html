@@ -1,0 +1,32 @@
+<form action="/login" method="post">
+    <table>
+        <tr>
+            <td colspan="2" align="center">
+                <img id="avatar" src="static/images/default_avatar.png" width="128px" height="128px">
+            </td>
+        </tr>
+        <tr>
+            <td>用户名称</td>
+            <td>
+                <input id="unameinput" type="text" name="uname" class="form-content">
+            </td>
+        </tr>
+        <tr>
+            <td>用户密码</td>
+            <td>
+                <input type="password" name="upwd" class="form-content">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span class="tip">{{result}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="登录" class="btn">
+                <input type="button" value="注册"class="btn" onclick="javascript:location.href='/register';">
+            </td>
+        </tr>
+    </table>
+</form>

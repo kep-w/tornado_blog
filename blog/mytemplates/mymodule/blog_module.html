@@ -1,0 +1,58 @@
+<div id="hd">
+    <span>欢迎{{ uname }}</span>
+    <span id="publish" onclick="javascript:location.href='/publish'">
+    -->发布个人博客
+    </span>
+</div>
+
+<ul id="blog">
+    {% for blog in blogs %}
+    <li>
+        <table class="content">
+            <tr>
+                <td rowspan="4" class="first-col">
+                    <table class="first">
+                        <tr>
+                            <td>
+                                <div class="avatar">
+                                    <img src= {% if blog['avatar']%}
+                                        static/images/{{blog['avatar']}}
+                                    {% else %}
+                                        static/images/default_avatar.png
+                                    {% end %}
+                                    alt="用户头像">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p>{{blog['author']}}</p></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>{{blog['title']}}</td>
+            </tr>
+            <tr>
+                <td>
+                    {% if blog['tags']%}
+                        {{blog['tags']}}
+                    {% else %}
+
+                    {% end %}
+                </td>
+            </tr>
+            <tr>
+                <td>{{blog['content']}}</td>
+            </tr>
+            <tr>
+                <td class="comment">
+                    {% if blog['count'] %}
+                        评论数量: {{blog['count']}}
+                    {% else %}
+                        赶快来抢个沙发
+                    {% end %}
+                </td>
+            </tr>
+        </table>
+    </li>
+    {% end %}
+</ul>

@@ -1,0 +1,45 @@
+.login{
+    width: 60%;
+    margin: 100px auto;
+}
+.login table{
+    width: 60%;
+    margin: auto;
+}
+.login td{
+    height: 50px;
+    font-size: 18px;
+}
+.tip{
+    color: #ce8483;
+    font-size:16px;
+    font-weight:bold;
+}
+.btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid lightseagreen;
+    background: ghostwhite;
+    color: black;
+    margin:0px 20px;
+}
+.form-content{
+    width:220px;
+    height:40px;
+    padding: 5px 10px;
+    margin:10px 10px;
+    box-sizing: border-box;
+    border:1px solid lightseagreen;
+    border-radius: 5px;
+}
+.fileIn{
+    width: 220px;
+    vertical-align: middle;
+}
+.slt{
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
